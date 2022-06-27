@@ -1,0 +1,9 @@
+# mit hashtag können Notizen hin
+# Verbieten aller rechtlichen Seiten - Stern steht für alles 
+
+User-agent: *
+
+Disallow: /agb.html
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+Disallow: /widerruf.html

@@ -1,0 +1,977 @@
+body {
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Azeret Mono';
+    text-transform: capitalize;
+    background: url(../img/bg.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: top;
+    overflow-x: hidden;
+}
+
+/* ######################### CHARTS ######################### */
+.color-white {
+    color: white;
+}
+
+.overflowhidden {
+    overflow: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.transi-125 {
+    transition: 125ms;
+}
+
+.transi-75 {
+    transition: 75ms;
+}
+
+.letter-2 {
+    letter-spacing: 2px;
+}
+
+.height700 {
+    height: 700px;
+}
+
+.width520 {
+    width: 520px;
+}
+
+.height350 {
+    height: 350px;
+}
+
+.width260 {
+    width: 260px;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.background-red {
+    background: #b63b3b;
+}
+
+.background-green {
+    background: #2DB587;
+}
+
+/* ######################### CHARTS ######################### */
+/* ######################### LOGIN AREA ######################### */
+
+#loginareacreate, #loginarea, #loginprivacy, #loginimprint {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: blurIn 0.4s forwards;
+}
+
+.loginwindow {
+    background-image: url(../img/bg.jpg);
+    border: 5px solid #d4d4d4;
+    border-radius: 15px;
+    height: 520px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Azeret Mono';
+    color: white;
+}
+
+.openloginareacreate {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.openloginarea {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.closelogin {
+    position: absolute;
+    top: 70px;
+    cursor: pointer;
+    background: #b8b8b87a;
+    border-radius: 40px;
+    padding: 5px;
+    width: 20px;
+    margin-left: 355px;
+}
+
+.closelogin:hover {
+    transform: scale(1.3);
+}
+
+.loginbtn {
+    color: rgb(59, 59, 59);
+    background: rgb(204, 204, 204);
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 180px;
+    height: 50px;
+    font-family: 'Azeret Mono';
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+    transition: 125ms;
+}
+
+.logintitle {
+    font-size: 24px;
+    cursor: default;
+}
+
+.logininputstyle {
+    border: 2px solid white;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    width: 98.6%;
+    height: 18px;
+    font-family: 'Azeret Mono';
+    outline: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: -2px;
+    margin-top: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logininputstyletitle {
+    border: 2px solid white;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 22px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+}
+
+.passwortforget {
+    text-decoration: none;
+    margin-top: -20px;
+    background-color: black;
+    color: #5b0000;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 170px;
+    text-align: center;
+}
+
+.passwortforget:hover {
+    opacity: 0.6;
+}
+
+.checkboxcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.checkboxcontainer:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkboxcontainer input:checked~.checkmark {
+    background-color: #f32121;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxcontainer input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkboxcontainer .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.Impressum {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Impressumtext {
+    cursor: pointer;
+    font-family: 'Azeret Mono';
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Impressumtext:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+    transition: 125ms;
+}
+
+.Impressumtext2 {
+    cursor: pointer;
+    font-family: 'Azeret Mono';
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -11px;
+    border-left: none;
+}
+
+.Impressumtext2:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+    transition: 125ms;
+}
+
+.impsize {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 92%;
+    width: 91%;
+    font-size: 0.7em;
+    padding: 15px;
+    background: #000000b8;
+    text-transform: uppercase;
+    border-radius: 12px;
+}
+
+.incomingstyle {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tutorialstyle {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tutorialstylelink {
+    text-decoration: underline;
+    color: white;
+}
+
+.tutorialstylelink:hover {
+    color: rgb(147, 197, 255);
+}
+
+.contactstyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    width: 300px;
+    height: 30px;
+    font-family: 'Azeret Mono';
+    outline: none;
+    text-align: center;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
+
+#message {
+    width: 300px;
+    height: 250px;
+    font-family: 'Azeret Mono';
+    outline: none;
+    text-align: center;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+}
+
+.submitbtn {
+    width: 308px;
+    height: 50px;
+    font-family: 'Azeret Mono';
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    border-top: none;
+}
+
+.submitbtn:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+    transition: 125ms;
+}
+
+/* ######################### LOGIN AREA ######################### */
+/* ######################### STARTBUTTON ######################### */
+.startbtnposition {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.startbtnstyle {
+    width: 100%;
+    height: 44px;
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.startbtnstyle:hover {
+    opacity: 0.8;
+}
+
+.startbtnunder {
+    color: white;
+    text-align: center;
+    cursor: default;
+}
+
+.headerstart {
+    justify-content: center !important;
+    margin-bottom: 5px;
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 6px 6px 6px 2px black;
+}
+
+.headerstartposition {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.welcomeimg {
+    background: white;
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+
+.welcometext {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 25px;
+    background: #ffffff4f;
+    text-align: center;
+    background-color: rgb(204, 204, 204);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: rgb(59, 59, 59);
+    cursor: default;
+}
+
+.welcometext2 {
+    color: white;
+    font-size: 20px;
+    cursor: default;
+}
+
+.followicons {
+    padding: 10px;
+}
+
+.followicons:hover {
+    opacity: 0.8;
+}
+
+.startlinkstyle {
+    text-decoration: none;
+    color: yellow;
+    cursor: pointer;
+}
+
+.startlinkstyle:hover {
+    opacity: 0.8;
+}
+
+/* ######################### STARTBUTTON ######################### */
+/* ######################### FEATURES ######################### */
+#loader img {
+    width: 150px;
+    transition: all 225ms linear;
+    animation: spin 3s linear infinite;
+}
+
+#loadcontainer,
+.loadcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    min-height: 50vh;
+    gap: 1rem 0.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.goupcontainer {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    background-color: #363636;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goupcontainer:hover {
+    opacity: 0.8;
+}
+
+.counter {
+    color: #d4d4d4;
+    background: linear-gradient(180deg, #000000, #0000008f);
+    font-size: 14px;
+    position: absolute;
+    margin-top: 56px;
+    width: 200px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+::placeholder {
+    color: rgb(59, 59, 59);
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(204, 204, 204);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(173, 173, 173);
+}
+
+/* ######################### FEATURES ######################### */
+/* ######################### HEADER ######################### */
+header {
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    background: url(../img/bg.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: top;
+    max-width: 1200px;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+}
+
+.header {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0px;
+}
+
+.header img:first-child {
+    height: 50px;
+    padding: 10px;
+}
+
+.headertitle {
+    max-width: 170px;
+}
+
+.headertitleref {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 1;
+    margin-bottom: 5px;
+    width: 255px;
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 6px 6px 6px 2px black;
+    margin-right: 2px;
+}
+
+.headertitleref:hover {
+    opacity: 0.95;
+}
+
+#searchBar {
+    display: flex;
+    width: 100%;
+    box-shadow: 6px 6px 6px 2px black;
+}
+
+.searchbarclass {
+    margin: auto;
+    display: none;
+    width: 80%;
+    padding-top: 2px;
+}
+
+.searchbarclass input:focus,
+#searchBar input:focus {
+    outline: none;
+}
+
+.searchbarclass input,
+#searchBar input {
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid white;
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-family: 'Azeret Mono' !important;
+}
+
+.searchbarclass button,
+#searchBar button {
+    color: rgb(59, 59, 59);
+    background-color: rgb(204, 204, 204);
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid white;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    transition: 125ms;
+    cursor: pointer;
+    border-left: none;
+    font-family: 'Azeret Mono' !important;
+}
+
+.searchbarclass button:hover,
+#searchBar button:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+    transition: 125ms;
+}
+
+.icon-cursor {
+    cursor: pointer;
+    width: 20px;
+    background: #b8b8b87a;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.icon-cursor:hover {
+    transform: scale(1.3);
+}
+
+.iconinside {
+    color: transparent;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.musicbtnimg {
+    height: 38px !important;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.musicbtnimg:hover {
+    transform: scale(1.3);
+}
+
+.musicbtnplay {
+    height: 36px !important;
+}
+
+.musicbtnmute {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.musicbtnposition {
+    display: flex;
+    align-items: center;
+    background: rgb(204, 204, 204);
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 6px 6px 6px 2px black;
+    height: 70px;
+    margin-bottom: 5px;
+}
+
+#openFavorite,
+#closeFavorite {
+    height: 70px;
+    padding: 10px;
+}
+
+/* ######################### HEADER ######################### */
+/* ######################### FOOTER ######################### */
+#footerId {
+    max-width: 800px !important;
+    margin: 20px auto;
+}
+
+#footerId:hover {
+    color: white;
+    background: rgb(153, 153, 153);
+}
+
+.continuebutton {
+    color: rgb(59, 59, 59);
+    background: rgb(204, 204, 204);
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    height: 40px;
+    min-width: 40%;
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 7px 60px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space {
+    height: 40px;
+    width: 100%;
+    display: none;
+}
+
+#blurContainer {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: blurIn 0.4s forwards;
+}
+
+@keyframes blurIn {
+    0% {
+        background: rgba(255, 255, 255, 0.0);
+    }
+
+    100% {
+        background: rgba(52, 52, 52, 0.9);
+    }
+}
+
+/* ######################### FOOTER ######################### */
+/* ######################### RESPONSIVE ######################### */
+@media screen and (max-width: 800px) {
+    .continuebutton {
+        width: 95% !important;
+    }
+
+    .goupcontainer {
+        bottom: 5px !important;
+        right: 5px !important;
+    }
+
+    .headertitleref {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        width: 60px !important;
+    }
+
+    .dnone {
+        display: none !important;
+    }
+
+    .buttonContainer button {
+        font-size: 23px !important;
+    }
+
+    #pokeId {
+        font-family: 'Azeret Mono';
+        font-size: 1.2em !important;
+    }
+
+    .icon-cursor {
+        width: 9% !important;
+    }
+
+    .header img:first-child {
+        height: 45px !important;
+        padding: 12px !important;
+    }
+
+    #statsTable tr {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        margin-bottom: 3px !important;
+        width: 105% !important;
+    }
+
+    #pokeCard {
+        top: 0 !important;
+        width: -webkit-fill-available !important;
+        height: 94% !important;
+        border: none !important;
+        border-radius: 0px !important;
+    }
+
+    #pokeImg {
+        height: 30% !important;
+    }
+
+    #pokeName {
+        width: 90% !important;
+        top: 49% !important;
+        background: linear-gradient(180deg, #000000, #00000000);
+        border-top-left-radius: 17px !important;
+        border-top-right-radius: 17px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    #statsTable {
+        top: 33% !important;
+        width: 75% !important;
+    }
+
+    #infoCard {
+        border-top-right-radius: 50px !important;
+        border-top-left-radius: 50px !important;
+    }
+
+    #movesId {
+        margin-left: 10px !important;
+        width: calc(100% - 20px) !important;
+        height: 51% !important;
+    }
+
+    #movesIdheader {
+        top: 33% !important;
+    }
+
+    #aboutButton,
+    #statusButton,
+    #movesButton, #evoButton {
+        margin: 0px 9px !important;
+        font-size: 1.2em !important;
+    }
+
+    .welcometext {
+        font-size: 30px !important;
+    }
+
+    .startbtnposition {
+        margin-bottom: 0px !important;
+    }
+
+    .welcomeimg {
+        width: 300px !important;
+    }
+
+    .insidebackground {
+        width: 100% !important;
+        height: 97% !important;
+        margin: 20px !important;
+    }
+
+    .closeicon {
+        top: 5px !important;
+        right: 5px !important;
+    }
+
+    .hearticon {
+        top: 5px !important;
+        left: 5px !important;
+    }
+
+    #closeContainer {
+        padding: 5px !important;
+    }
+
+    .closeicon2 {
+        right: 10px !important;
+        top: 20px !important;
+    }
+
+    .musicbtnposition {
+        margin-bottom: 3px !important;
+    }
+
+    #evolutionSection {
+        display: flex;
+        height: 278px !important;
+        overflow: auto;
+    }
+
+    .evolutionImg {
+        height: 45px !important;
+    }
+
+    .evolutionArrow {
+        height: 15px !important;
+        margin: 15px !important;
+    }
+
+    .evolutiontitle {
+        width: 133% !important;
+        margin-left: -57px !important;
+        margin-top: 0px !important;
+    }
+
+    .closelogin {
+        margin-left: 0px !important;
+    }
+
+    .logintitle {
+        font-size: 18px !important;
+    }
+
+    .loginwindow {
+        width: 97% !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .logininputstyle {
+        width: 98.5% !important;
+    }
+
+    .welcomeimg {
+        width: 200px !important;
+    }
+
+    .evolutiontitle {
+        margin-left: -36px !important;
+    }
+
+    .Impressumtext {
+        font-size: 12px;
+    }
+
+    .Impressumtext2 {
+        font-size: 12px;
+    }
+}

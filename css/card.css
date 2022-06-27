@@ -1,0 +1,692 @@
+/* ######################### FIRST VIEW ######################### */
+main {
+    padding-top: 5px;
+    max-width: 1200px;
+    margin: auto;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.smallCard {
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 225ms;
+    border: 10px solid rgb(237, 220, 42);
+    box-shadow: 6px 6px 6px 2px black;
+    height: 350px;
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.smallCard:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 104%;
+    left: 5%;
+    height: 3px;
+    width: 90%;
+    opacity: 0;
+    background: linear-gradient(rgba(255, 255, 0, 0.541), rgba(0, 0, 0, 0.541));
+    transition-property: transform, opacity;
+    border: none;
+}
+
+.smallCard:hover,
+.smallCard:focus,
+.smallCard:active {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px) scale(1.0);
+}
+
+.smallCard:hover:before,
+.smallCard:focus:before,
+.smallCard:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+.first-smallcard-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: 4px solid rgb(220, 192, 97);
+    height: 170px;
+    width: 97%;
+}
+
+.first-smallcard-container img {
+    width: 140px !important;
+    transition-duration: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.first-smallcard-container img:hover {
+    transform: translateY(-25px) scale(1.3);
+}
+
+.second-smallcard-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 82px;
+}
+
+.baseexpstyle {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-right: 5px;
+    margin-right: 20px !important;
+}
+
+.smallcardpokename {
+    text-shadow: 2px 2px 0px black;
+}
+
+.idposition {
+    text-align: end;
+    font-size: 10px;
+    text-shadow: none;
+    color: black;
+    width: 102%;
+}
+
+.idposition2 {
+    position: absolute;
+    top: -10px;
+    text-align: start;
+    font-size: 10px;
+    text-shadow: none;
+    color: black;
+    left: 0;
+}
+
+h3 {
+    margin: 0px !important;
+}
+
+.navicon {
+    width: 25px;
+}
+
+.statsfrontposition {
+    height: 70%;
+    margin-bottom: 0px;
+    border-left: 2px solid #3636365e;
+    padding-left: 4px;
+    justify-content: center;
+}
+
+.statsfrontposition2 {
+    width: 100%;
+    height: 83px;
+}
+
+.statsfrontstyle {
+    height: 34%;
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+    font-size: 14px;
+    font-family: monospace;
+    background: url(../img/ichealth.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left 61px top 6px;
+}
+
+.statsfrontstyle2 {
+    width: 100%;
+    height: 61%;
+    border-top: 2px solid #3636365e;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    font-size: 14px;
+    font-family: monospace;
+    background: url(../img/icfighting.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 2px top 18px;
+}
+
+.frontability {
+    color: #363636;
+    font-weight: bold;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(30deg, rgb(220, 192, 97) 0%, rgb(255, 240, 191) 40%, rgb(255, 197, 5) 70%, rgb(255, 245, 211) 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: -2px;
+    border: 0.5px solid #b4a5a5;
+}
+
+.second-smallcard-container span:first-child {
+    margin-bottom: 10px;
+}
+
+.second-smallcard-container span {
+    min-width: 60px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 40%;
+    background: #0000004a;
+}
+
+#pokeCard {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: 95vw;
+    min-height: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px 2px black;
+    border: 15px solid rgb(237, 220, 42);
+}
+
+.insidebackground {
+    width: 400px;
+    height: 415px;
+    margin-top: 25px;
+    border: 7px solid rgb(220, 192, 97);
+}
+
+.insidebackground2 {
+    width: 100%;
+    height: 73%;
+    display: flex;
+    justify-content: center;
+}
+
+.allPokeheader {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Azeret Mono';
+    background-position: right;
+    width: 224px;
+    margin-left: -2px;
+}
+
+/* ######################### FIRST VIEW ######################### */
+/* ######################### SECOND VIEW ######################### */
+.animation-bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInUp {
+
+    0%,
+    60%,
+    75%,
+    90%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0)translateX(-50%);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)translateX(-50%);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0)translateX(-50%);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)translateX(-50%);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)translateX(-50%);
+    }
+}
+
+@keyframes bounceInUp {
+
+    0%,
+    60%,
+    75%,
+    90%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0)translateX(-50%);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)translateX(-50%);
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0)translateX(-50%);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)translateX(-50%);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)translateX(-50%);
+    }
+}
+
+#pokeCard:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    content: '';
+    top: 102%;
+    left: 5%;
+    height: 5px;
+    width: 90%;
+    background: linear-gradient(rgba(255, 255, 0, 0.541), rgba(0, 0, 0, 0.541));
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.closeicon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #b8b8b87a;
+    border-radius: 16px;
+    padding: 6px;
+    width: 19px;
+}
+
+.hearticon {
+    z-index: 4;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #b8b8b87a;
+    border-radius: 14px !important;
+    padding: 6px;
+}
+
+#closeContainer {
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0%;
+    right: 1%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#pokeId {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    font-family: 'Azeret Mono';
+    background: linear-gradient(0deg, #0000007d, transparent);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#pokeImg {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    height: 45%;
+}
+
+.animation-scaledown {
+    animation: scaledown 0.6s forwards;
+}
+
+@keyframes scaledown {
+    0% {
+        height: 45%;
+    }
+
+    100% {
+        height: 35%;
+    }
+}
+
+.animation-scaleup {
+    animation: scaleup 0.6s forwards;
+}
+
+@keyframes scaleup {
+    0% {
+        height: 35%;
+    }
+
+    100% {
+        height: 45%;
+    }
+}
+
+#pokeName {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'Azeret Mono';
+    background: linear-gradient(180deg, #0000007d, transparent);
+    border-radius: 17px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#pokeName span {
+    border-radius: 40%;
+    text-align: center;
+    color: #242424;
+}
+
+.typesstyle {
+    margin: 15px;
+    padding: 10px;
+    width: 100px;
+    letter-spacing: normal;
+    font-size: 20px;
+    background-color: #ffffff7d;
+}
+
+.filterbg2 {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+/* ######################### SECOND VIEW ######################### */
+/* ######################### SECOND VIEW EXTRA VIEW ######################### */
+#infoCard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    width: 100%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    color: #272727;
+}
+
+.animation-fadeup {
+    animation: fadeup 0.5s forwards;
+}
+
+@keyframes fadeup {
+    0% {
+        height: 35%;
+        background: transparent;
+    }
+
+    50% {
+        background: linear-gradient(30deg, rgba(17, 17, 17, 0.3) 0%, rgba(19, 29, 28, 0.3) 50%, rgba(29, 39, 30, 0.3) 100%);
+    }
+
+    100% {
+        height: 70%;
+        background: rgb(204 204 204 / 90%);
+    }
+}
+
+.animation-fadedown {
+    animation: fadedown 0.5s forwards;
+}
+
+@keyframes fadedown {
+    0% {
+        height: 70%;
+        background: linear-gradient(30deg, rgba(17, 17, 17, 0.6) 0%, rgba(19, 29, 28, 0.6) 50%, rgba(29, 39, 30, 0.6) 100%);
+    }
+
+    50% {
+        background: linear-gradient(30deg, rgba(17, 17, 17, 0.3) 0%, rgba(19, 29, 28, 0.3) 50%, rgba(29, 39, 30, 0.3) 100%);
+    }
+
+    100% {
+        height: 35%;
+        background: transparent;
+    }
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    background: rgb(204, 204, 204);
+    align-items: center;
+    z-index: 999999;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.buttonContainer button {
+    background-color: transparent;
+    border: none;
+    color: rgb(59, 59, 59);
+    font-size: 20px;
+}
+
+.buttonContainer button:hover {
+    transform: scale(1.3);
+    color: white;
+    background: rgba(153, 153, 153, 0.781);
+    border-radius: 10px;
+}
+
+.buttonshadow {
+    width: 60%;
+    box-shadow: 0px 2px 2px 1px rgba(39, 39, 39, 0.9);
+    animation: slidewide 0.225s forwards;
+}
+
+@keyframes slidewide {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+#aboutButton,
+#statusButton,
+#movesButton, #evoButton {
+    margin: 0 16px;
+    cursor: pointer;
+    font-family: 'Azeret Mono';
+    font-size: 1.8em;
+}
+
+#statsTable {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+#statsTable tr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 80px;
+    background: rgb(204, 204, 204);
+}
+
+#statsTable th:last-child {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+#statsTable th:last-child span {
+    height: 100%;
+    width: 80%;
+    background: #454F4E;
+    border-radius: 10px;
+}
+
+#statsTable th:last-child div {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.insideiconstyle {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 100%;
+    height: 40px;
+    background-size: contain !important;
+    background-position-x: center;
+}
+
+.insideiconposition {
+    padding-top: 7px;
+}
+
+.movesspan {
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    padding: 6px;
+    margin: 5px;
+    height: fit-content;
+    font-family: monospace;
+    font-weight: bold;
+    background: rgb(204, 204, 204);
+}
+
+#movesId {
+    position: absolute;
+    justify-content: center;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding-bottom: 20px;
+    height: 55%;
+}
+
+#movesIdheader {
+    position: absolute;
+    top: 156px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(180deg, #595959, #9a9a9a8f);
+    color: white;
+}
+
+/* ######################### SECOND VIEW EXTRA VIEW ######################### */
+/* ######################### EVOLUTION ######################### */
+.evolutionImg {
+    height: 80px;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    padding: 6px;
+    background: rgb(204, 204, 204);
+}
+
+.evolutionArrow {
+    height: 30px;
+    margin: 33px;
+
+}
+
+#evolutionSection {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    height: 265px;
+    width: 95%;
+}
+
+.evolutiontitle {
+    font-family: 'Azeret Mono';
+    text-align: center;
+    font-size: 16px;
+    width: 125.7%;
+    margin-left: -67px;
+    margin-top: -8px;
+    background: linear-gradient(180deg, #595959, #9a9a9a8f);
+    color: white;
+    margin-bottom: 20px;
+}

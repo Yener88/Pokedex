@@ -1,0 +1,429 @@
+/* ######################### TYPES FARBE ######################### */
+
+.normal {
+    border: 3.5px grey solid;
+}
+
+.flying {
+    border: 3.5px lightskyblue solid;
+}
+
+.fire {
+    border: 3.5px orangered solid;
+}
+
+.grass {
+    border: 3.5px green solid;
+}
+
+.poison {
+    border: 3.5px violet solid;
+}
+
+.water {
+    border: 3.5px turquoise solid;
+}
+
+.bug {
+    border: 3.5px lightgreen solid;
+}
+
+.electric {
+    border: 3.5px yellow solid;
+}
+
+.ground {
+    border: 3.5px burlywood solid;
+}
+
+.fairy {
+    border: 3.5px pink solid;
+}
+
+.fighting {
+    border: 3.5px brown solid;
+}
+
+.psychic {
+    border: 3.5px lightsalmon solid;
+}
+
+.rock {
+    border: 3.5px gainsboro solid;
+}
+
+.steel {
+    border: 3.5px steelblue solid;
+}
+
+.ghost {
+    border: 3.5px ghostwhite solid;
+}
+
+.ice {
+    border: 3.5px lightsteelblue solid;
+}
+
+.dragon {
+    border: 3.5px darkmagenta solid;
+}
+
+/* ######################### ERSTE ANSICHT TEXTFARBE ######################### */
+.normaltext {
+    color: rgb(190, 190, 190);
+}
+
+.flyingtext {
+    color: lightskyblue;
+}
+
+.firetext {
+    color: orangered;
+}
+
+.grasstext {
+    color: rgb(0, 192, 0);
+}
+
+.poisontext {
+    color: violet;
+}
+
+.watertext {
+    color: turquoise;
+}
+
+.bugtext {
+    color: lightgreen;
+}
+
+.electrictext {
+    color: yellow;
+}
+
+.groundtext {
+    color: rgb(255, 229, 196);
+}
+
+.fairytext {
+    color: pink;
+}
+
+.fightingtext {
+    color: rgb(212, 66, 66);
+}
+
+.psychictext {
+    color: lightsalmon;
+}
+
+.rocktext {
+    color: gainsboro;
+}
+
+.steeltext {
+    color: steelblue;
+}
+
+.ghosttext {
+    color: ghostwhite;
+}
+
+.icetext {
+    color: lightsteelblue;
+}
+
+.dragontext {
+    color: darkmagenta;
+}
+
+/* ######################### ERSTE ANSICHT FARBVERLAUF HNTERGRUND ######################### */
+.normal-bg {
+    background: linear-gradient(30deg, rgb(124, 246, 255) 0%, rgb(141, 141, 141) 40%, rgb(153, 153, 153) 70%, rgb(94, 94, 94) 100%);
+}
+
+.flying-bg {
+    background: linear-gradient(30deg, rgba(17, 17, 17, 1) 0%, rgb(141, 141, 141) 40%, rgb(152, 216, 255) 70%, rgb(94, 94, 94) 100%);
+}
+
+.fire-bg {
+    background: linear-gradient(30deg, rgb(75, 0, 0) 0%, rgb(141, 141, 141) 40%, rgb(255, 68, 0) 70%, rgb(94, 94, 94) 100%);
+}
+
+.grass-bg {
+    background: linear-gradient(30deg, rgb(24, 83, 0) 0%, rgb(141, 141, 141) 40%, rgb(0, 199, 0) 70%, rgb(94, 94, 94) 100%);
+}
+
+.poison-bg {
+    background: linear-gradient(30deg, rgb(56, 0, 58) 0%, rgb(141, 141, 141) 40%, rgba(238, 130, 238, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.water-bg {
+    background: linear-gradient(30deg, rgb(0, 11, 73) 0%, rgb(141, 141, 141) 40%, rgb(0, 102, 255) 70%, rgb(94, 94, 94) 100%);
+}
+
+.bug-bg {
+    background: linear-gradient(30deg, rgb(33, 61, 0) 0%, rgb(141, 141, 141) 40%, rgba(144, 238, 144, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.electric-bg {
+    background: linear-gradient(30deg, rgb(76, 82, 0) 0%, rgb(141, 141, 141) 40%, rgba(255, 255, 0, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.ground-bg {
+    background: linear-gradient(30deg, rgb(53, 45, 45) 0%, rgb(141, 141, 141) 40%, rgba(222, 184, 135, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.fairy-bg {
+    background: linear-gradient(30deg, rgb(49, 0, 25) 0%, rgb(141, 141, 141) 40%, rgba(255, 192, 203, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.fighting-bg {
+    background: linear-gradient(30deg, rgb(61, 0, 0) 0%, rgb(141, 141, 141) 40%, rgba(165, 42, 42, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.psychic-bg {
+    background: linear-gradient(30deg, rgb(52, 0, 68) 0%, rgb(141, 141, 141) 40%, rgba(255, 160, 122, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.rock-bg {
+    background: linear-gradient(30deg, rgb(58, 58, 58) 0%, rgb(141, 141, 141) 40%, rgba(220, 220, 220, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.steel-bg {
+    background: linear-gradient(30deg, rgb(97, 97, 97) 0%, rgb(141, 141, 141) 40%, rgba(70, 130, 180, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.ghost-bg {
+    background: linear-gradient(30deg, rgb(70, 70, 70) 0%, rgb(141, 141, 141) 40%, rgba(248, 248, 255, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.ice-bg {
+    background: linear-gradient(30deg, rgb(214, 214, 214) 0%, rgb(141, 141, 141) 40%, rgba(176, 196, 222, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.dragon-bg {
+    background: linear-gradient(30deg, rgb(77, 77, 77) 0%, rgb(141, 141, 141) 40%, rgba(139, 0, 139, 1) 70%, rgb(94, 94, 94) 100%);
+}
+
+.dark-bg {
+    background: linear-gradient(30deg, rgba(17, 17, 17, 1) 0%, rgb(37, 37, 37) 40%, rgb(110, 110, 110) 70%, rgba(36, 39, 28, 1) 100%);
+}
+
+/* ######################### INNER KARTE BILDER ######################### */
+.normal-bg2 {
+    background-image: url('../img/normal.jpg');
+    background-size: cover;
+}
+
+.flying-bg2 {
+    background-image: url('../img/flying.jpg');
+    background-size: cover;
+}
+
+.fire-bg2 {
+    background-image: url('../img/fire.jpg');
+    background-size: cover;
+}
+
+.grass-bg2 {
+    background-image: url('../img/grass.jpg');
+    background-size: cover;
+}
+
+.poison-bg2 {
+    background-image: url('../img/poison.jpg');
+    background-size: cover;
+}
+
+.water-bg2 {
+    background-image: url('../img/water.jpg');
+    background-size: cover;
+}
+
+.bug-bg2 {
+    background-image: url('../img/bug.jpg');
+    background-size: cover;
+}
+
+.electric-bg2 {
+    background-image: url('../img/electric.jpg');
+    background-size: cover;
+}
+
+.ground-bg2 {
+    background-image: url('../img/ground.jpg');
+    background-size: cover;
+}
+
+.fairy-bg2 {
+    background-image: url('../img/fairy.jpg');
+    background-size: cover;
+}
+
+.fighting-bg2 {
+    background-image: url('../img/fighting.jpg');
+    background-size: cover;
+}
+
+.psychic-bg2 {
+    background-image: url('../img/psychic.jpg');
+    background-size: cover;
+}
+
+.rock-bg2 {
+    background-image: url('../img/rock.jpg');
+    background-size: cover;
+}
+
+.steel-bg2 {
+    background-image: url('../img/steel.jpg');
+    background-size: cover;
+}
+
+.ghost-bg2 {
+    background-image: url('../img/ghost.jpg');
+    background-size: cover;
+}
+
+.ice-bg2 {
+    background-image: url('../img/ice.jpg');
+    background-size: cover;
+}
+
+.dragon-bg2 {
+    background-image: url('../img/fire.jpg');
+    background-size: cover;
+}
+
+.dark-bg2 {
+    background-image: url('../img/dark.jpg');
+    background-size: cover;
+}
+
+/* ######################### TYPES ICONS ######################### */
+.normal-icon {
+    background-image: url('../img/icnormal.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.flying-icon {
+    background-image: url('../img/icflying.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.fire-icon {
+    background-image: url('../img/icfire.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.grass-icon {
+    background-image: url('../img/icgrass.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.poison-icon {
+    background-image: url('../img/icpoison.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.water-icon {
+    background-image: url('../img/icwater.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.bug-icon {
+    background-image: url('../img/icbug.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.electric-icon {
+    background-image: url('../img/icelectric.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.ground-icon {
+    background-image: url('../img/icground.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.fairy-icon {
+    background-image: url('../img/icfairy.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.fighting-icon {
+    background-image: url('../img/icfighting.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.psychic-icon {
+    background-image: url('../img/icpsychic.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.rock-icon {
+    background-image: url('../img/icrock.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.steel-icon {
+    background-image: url('../img/icsteel.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.ghost-icon {
+    background-image: url('../img/icghost.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.ice-icon {
+    background-image: url('../img/icice.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.dragon-icon {
+    background-image: url('../img/icdragon.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
+
+.dark-icon {
+    background-image: url('../img/icdark.png');
+    background-size: cover;
+    background-size: 23px;
+    background-repeat: no-repeat;
+}
