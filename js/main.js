@@ -3,9 +3,10 @@
 // - wenn man nach namen sucht stimmt die id in der großen ansicht nicht immer i - 1
 // - bei ios handys wird die email nicht übermittelt // warnung entfernen möglich?
 // - 
-// - 
+// - Backend hinzufügen // 
 // - schließ animation hinzufügen
-// - Cookie muss erneuert werden //
+// - Cookie muss erneuert werden 
+// - feinschliff und abschließen
 
 let pokeAll = [];
 let pokeAllNames;

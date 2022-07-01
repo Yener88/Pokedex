@@ -54,7 +54,7 @@ async function swipeRight(i) {
 // inner big view
 function showBigText(i, firstType) {
     document.getElementById('bigCard').innerHTML = /*html*/ `
-        <div id="pokeCard" class="color-white animation-bounceInUp ${firstType}-bg filterbg2">
+        <div id="pokeCard" onkeyup="swipeCardKey(event, i)" class="color-white animation-bounceInUp ${firstType}-bg filterbg2">
             <div class="insidebackground2"><div class="insidebackground ${firstType}-bg2"></div></div>
             <img id="favHeartopen" onclick="addFavourites(${i})" class="icon-cursor hearticon" src="img/open-heart.png">
             <img id="favHeartclose" onclick="exciseFavourites(${i})" class="icon-cursor hearticon d-none" src="img/full-heart.png">
