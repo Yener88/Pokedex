@@ -202,7 +202,7 @@ function showImprint() {
             <div class="impsize">
                 <h2>SUPPORT</h2>
                 <div class="tutorialstyle">                
-                Click the following link <br>to download a tutorial for use.<br>><a class="tutorialstylelink" href="https://yener-bas.developerakademie.net/Pokedex/download/tutorial.pdf" target="_blank">download tutorial as pdf</a><
+                Click the following link <br>to download a tutorial for use.<br>><a class="tutorialstylelink" href="https://yener-bas.developerakademie.net/Pokedex/tutorial.pdf" target="_blank">download tutorial as pdf</a><
                 </div>
                 <div>
                     <h2>Contact</h2>
