@@ -202,14 +202,14 @@ function showImprint() {
             <div class="impsize">
                 <h2>SUPPORT</h2>
                 <div class="tutorialstyle">                
-                Click the following link <br>to download a tutorial for use.<br>><a class="tutorialstylelink" href="http://yener-bas.developerakademie.net/Pokedex/download/tutorial.pdf" target="_blank">download tutorial as pdf</a><
+                Click the following link <br>to download a tutorial for use.<br>><a class="tutorialstylelink" href="https://yener-bas.developerakademie.net/Pokedex/download/tutorial.pdf" target="_blank">download tutorial as pdf</a><
                 </div>
                 <div>
                     <h2>Contact</h2>
                     <form class="contactstyle" action="http://yener-bas.developerakademie.net/Pokedex/send_mail.php" method="POST">                        
-                        <input name="name" placeholder="your name..." id="name">
+                        <input name="name" placeholder="your name..." id="name" required>
                         <textarea name="message" placeholder="write your message here..." id="message" required></textarea>
-                        <button class="submitbtn" type="submit">send mail</button>
+                        <button class="submitbtn" type="submit" required>send mail</button>
                     </form>
                 </div>
             </div>
