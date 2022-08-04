@@ -206,7 +206,7 @@ function showImprint() {
                 </div>
                 <div>
                     <h2>Contact</h2>
-                    <form class="contactstyle" action="http://yener-bas.developerakademie.net/Pokedex/send_mail.php" method="POST">                        
+                    <form class="contactstyle" action="https://yener-bas.developerakademie.net/Pokedex/send_mail.php" method="POST">                        
                         <input name="name" placeholder="your name..." id="name" required>
                         <textarea name="message" placeholder="write your message here..." id="message" required></textarea>
                         <button class="submitbtn" type="submit" required>send mail</button>
