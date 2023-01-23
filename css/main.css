@@ -393,17 +393,26 @@ body {
 
 .startbtnstyle {
     width: 100%;
-    height: 44px;
     color: rgb(59, 59, 59);
     background-color: rgb(204, 204, 204);
     border: 2px solid white;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .startbtnstyle:hover {
+    opacity: 0.8;
+}
+
+.startbtnstyleAhref {
+    width: 50%;
+    height: 44px;
+
+}
+
+.startbtnstyleAhref:hover {
     opacity: 0.8;
 }
 
