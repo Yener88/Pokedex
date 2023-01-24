@@ -84,7 +84,6 @@ body {
 
 .loginwindow {
     background-image: url(../img/bg.jpg);
-    border-radius: 15px;
     height: 100vh;
     width: 100vw;
     display: flex;
