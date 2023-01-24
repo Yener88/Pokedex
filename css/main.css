@@ -410,6 +410,7 @@ body {
     width: 50%;
     height: 44px;
 
+
 }
 
 .startbtnstyleAhref:hover {
@@ -793,6 +794,11 @@ header {
 /* ######################### FOOTER ######################### */
 /* ######################### RESPONSIVE ######################### */
 @media screen and (max-width: 800px) {
+    .startbtnstyleAhref {
+        width: 81%;
+
+    }
+
     .continuebutton {
         width: 95% !important;
     }
@@ -841,7 +847,7 @@ header {
 
     #pokeCard {
         top: 0 !important;
-        width: -webkit-fill-available !important;
+        width: 84vw !important;
         height: 94% !important;
         border: none !important;
         border-radius: 0px !important;
@@ -897,7 +903,7 @@ header {
     }
 
     .welcomeimg {
-        width: 300px !important;
+        width: 210px !important;
     }
 
     .insidebackground {
@@ -964,6 +970,12 @@ header {
 }
 
 @media screen and (max-width: 370px) {
+    .startbtnstyle {
+        font-size: 20px !important;
+    }
+    .startbtnstyleAhref {
+        width: 200px !important;
+    }
     .logininputstyle {
         width: 98.5% !important;
     }
