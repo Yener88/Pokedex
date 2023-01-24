@@ -9,7 +9,7 @@ body {
     background-size: contain;
     background-attachment: fixed;
     background-position: top;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* ######################### CHARTS ######################### */
@@ -78,17 +78,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
     background: rgba(255, 255, 255, 0.6);
     animation: blurIn 0.4s forwards;
 }
 
 .loginwindow {
     background-image: url(../img/bg.jpg);
-    border: 5px solid #d4d4d4;
     border-radius: 15px;
-    height: 520px;
-    width: 400px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -100,7 +98,6 @@ body {
 .openloginareacreate {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
 }
 
 .openloginarea {
@@ -111,13 +108,14 @@ body {
 
 .closelogin {
     position: absolute;
-    top: 70px;
+    top: 5px;
+    right: 26px;
     cursor: pointer;
     background: #b8b8b87a;
     border-radius: 40px;
     padding: 5px;
     width: 20px;
-    margin-left: 355px;
+    margin-left: 335px;
 }
 
 .closelogin:hover {
@@ -301,8 +299,8 @@ body {
 .impsize {
     overflow-y: auto;
     overflow-x: hidden;
-    height: 92%;
-    width: 91%;
+    height: 100vh;
+    width: 96%;
     font-size: 0.7em;
     padding: 15px;
     background: #000000b8;
@@ -576,6 +574,7 @@ header {
     background-position: top;
     max-width: 1200px;
     width: -webkit-fill-available;
+    height: -webkit-fill-available;
     margin: 0 auto;
 }
 
@@ -794,9 +793,15 @@ header {
 /* ######################### FOOTER ######################### */
 /* ######################### RESPONSIVE ######################### */
 @media screen and (max-width: 800px) {
+    .impsize {
+        width: 90%;
+    }
     .startbtnstyleAhref {
         width: 81%;
+    }
 
+    .startbtnstyle {
+        font-size: 20px !important;
     }
 
     .continuebutton {
@@ -958,24 +963,25 @@ header {
 
     .closelogin {
         margin-left: 0px !important;
+        right: 30px !important;
     }
 
     .logintitle {
         font-size: 18px !important;
     }
-
-    .loginwindow {
-        width: 97% !important;
-    }
 }
 
 @media screen and (max-width: 370px) {
-    .startbtnstyle {
-        font-size: 20px !important;
+    .closelogin {
+        right: 20px !important;
+    }
+    .impsize {
+        width: 88%;
     }
     .startbtnstyleAhref {
         width: 200px !important;
     }
+
     .logininputstyle {
         width: 98.5% !important;
     }
