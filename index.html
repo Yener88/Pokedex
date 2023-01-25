@@ -7,51 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title src="img/favicon.png">Pokedex</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/chartstylebg.css">
     <link rel="stylesheet" href="css/chartstyledisplayflex.css">
     <link rel="stylesheet" href="css/chartstylefonts.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <script src="js/main.js"></script>
-    <script src="js/privacyandimprint.js"></script>
+    <script src="js/evolution.js"></script>
+    <script src="js/opencard.js"></script>
+    <script src="js/favourite.js"></script>
+    <script src="js/search.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&thirdparty=1&always=1"></script>
 </head>
-<!-- DAS IST DER STARTSCREEN -->
+<!-- DAS IST DER HAUPTCONTENT -->
 
-<body id="overflowh">
+<body onload="pokesAll()" id="overflowh">
     <header>
-        <div class="headerstartposition">
-            <div class="header headerstart">
-                <img src="img/favicon.png"><img class="headertitle dnone" src="img/pokedex.png">
+        <div class="header">
+            <a href="pokedex.html" class="headertitleref"><img src="img/favicon.png"><img class="headertitle dnone"
+                    src="img/pokedex.png"></a>
+            <div class="musicbtnposition">
+                <img class="musicbtnimg musicbtnmute" onclick="muteAudio()" src="img/mute.png">
+                <img class="musicbtnimg musicbtnplay" onclick="playAudio()" src="img/play.png">
+                <img id="FavOpen" onclick="FavOpen()" class="musicbtnimg" src="./img/heartarea.png">
+                <img id="FavClose" onclick="FavClose()" class="musicbtnimg d-none" src="./img/back.png">
             </div>
         </div>
-        <div class="welcometext d-flex j-center">WELCOME TO POKEDEX!</div>
-        <div class="d-flex j-center"><img class="welcomeimg" src="img/welcome.gif"></div>
-        <div class="startbtnposition">
-            <!-- <a href="pokedex.html"> -->
-            <a class="startbtnstyleAhref" href="pokedex.html">
-            <button class="startbtnstyle">
-                PRESS START
-            </button>
-            </a>
-            <br>
+        <div id="searchBar" class="d-flex">
+            <input id="searchContainer" type="text" onkeyup="key(event)" placeholder="Enter Pokemon or ID">
+            <button onclick="search()">Search</button>
         </div>
-        <div id="loginareacreate" class="d-none"></div>
-        <div id="loginarea" class="d-none"></div>
-        <div id="loginprivacy" class="d-none"></div>
-        <div id="loginimprint" class="d-none"></div>
-        <div>
-            <div class="welcometext2 d-flex j-center">FOLLOW US!</div>
-            <div class="d-flex j-center">
-                <a href="http://www.youtube.de" target="_blank" class="followicons"><img src="img/wyoutube.png"></a>
-                <a href="http://www.instagram.de" target="_blank" class="followicons"><img src="img/winstagram.png"></a>
-                <a href="http://www.facebook.de" target="_blank" class="followicons"><img src="img/wfacebook.png"></a>
-            </div>
-            <div class="Impressum">
-                <a class="Impressumtext" onclick="showPrivacy()">PRIVACY&IMPRINT</a>
-                <a class="Impressumtext2" onclick="showImprint()">SUPPORT</a>
-            </div>
+        <div class="searchbarclass">
+            <input type="text" placeholder="Enter Pokemon or ID">
+            <button>Search</button>
         </div>
     </header>
+    <main id="maincontainer"></main>
+    <div id="blurContainer" class="d-none">
+        <div id="bigCard" class=" d-flex j-center-a-center"></div>
+    </div>
+    <div id="loadcontainer" class="loadcontainer">
+        <div id="loader"><img src="img/loadball.png"></div>
+    </div>
+    <footer onclick="showMorePokemon()" id="footerId" class="continuebutton">
+        <div>SHOW MORE POKEMON</div>
+        <div class="space"></div>
+        <div class="counter">
+            <span id="counter"></span><span>&nbsp;POKEMONS LOADED</span>
+        </div>
+    </footer>
+    <div onclick="scrollToTop()" id="goupcontainer" class="goupcontainer d-none">
+        <img src="img/arrowup.png">
+    </div>
 </body>
 
 </html>
