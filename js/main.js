@@ -151,13 +151,3 @@ function removeClass(id, className) {
 function emptyInner(id) {
     document.getElementById(id).innerHTML = ``;
 }
-
-//swipe function with keyboard
-function swipeCardKey(e, i) {
-    if (e.keyCode == 37) {
-        swipeLeft(i);
-    }
-    if (e.keyCode == 39) {
-        swipeRight(i);
-    }
-}

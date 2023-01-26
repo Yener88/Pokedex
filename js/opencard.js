@@ -54,11 +54,11 @@ async function swipeRight(i) {
 // inner big view
 function showBigText(i, firstType) {
     document.getElementById('bigCard').innerHTML = /*html*/ `
-        <div id="pokeCard" onkeyup="swipeCardKey(event, i)" class="color-white animation-bounceInUp ${firstType}-bg filterbg2">
+        <div id="pokeCard" class="color-white animation-bounceInUp ${firstType}-bg filterbg2">
             <div class="insidebackground2"><div class="insidebackground ${firstType}-bg2"></div></div>
             <img id="favHeartopen" onclick="addFavourites(${i})" class="icon-cursor hearticon" src="img/open-heart.png">
             <img id="favHeartclose" onclick="exciseFavourites(${i})" class="icon-cursor hearticon d-none" src="img/full-heart.png">
-            <img  onclick="closeBig()" class="icon-cursor closeicon" src="img/close.png">
+            <img onclick="closeBig()" class="icon-cursor closeicon" src="img/close.png">
             <div id="closeContainer" class="d-flex j-space-betwen">
                 <img id="leftswipe" onclick="swipeLeft(${i})" class="icon-cursor" src="img/left.png">
                 <img id="rightswipe" onclick="swipeRight(${i})" class="icon-cursor" src="img/right.png">
@@ -95,6 +95,12 @@ function showBigText(i, firstType) {
     `;
     addClass('overflowh', 'overflowhidden');
     loopForShowBigTypes(i);
+    //swipe function with keyboard
+    document.addEventListener("keydown", function (e) {
+        if (e.keyCode == 27) {
+            closeBig(i);
+        }
+    });
 }
 
 // Types
