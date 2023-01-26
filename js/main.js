@@ -18,7 +18,7 @@ let soundSwipe = new Audio('audio/swipe.mp3');
 
 // API
 async function pokesAll() {
-    let pokeAllNamesUrl = 'https://pokeapi.co/api/v2/pokemon?limit=400&offset=0';
+    let pokeAllNamesUrl = 'https://pokeapi.co/api/v2/pokemon?limit=898&offset=0';
     let pokeAllNamesresponse = await fetch(pokeAllNamesUrl);
     pokeAllNames = await pokeAllNamesresponse.json();
     for (let i = pokeBegin; i < pokeMax; i++) {
@@ -40,7 +40,7 @@ function pokeAllText(i, firstType) {
                 <h3 class="baseexpstyle ${firstType}text">${pokeAll[i]['base_experience']}XP</h3>
             </div>
             <div class="first-smallcard-container ${firstType}-bg2">
-                <img src="${pokeAll[i]['sprites']['other']['dream_world']['front_default']}">
+                <img src="${pokeAll[i]['sprites']['other']['official-artwork']['front_default']}">
             </div>
             <div class="frontability">Ability:<div>${pokeAll[i]['abilities'][0]['ability']['name']}</div></div>
 

@@ -4,12 +4,14 @@ async function searchOnlyString(value) {
     for (let i = 0; i < pokeAllNames['results'].length; i++) {
         let pokemonName = pokeAllNames['results'][i];
         if (checkLetters(pokemonName, value)) {
-            console.log(`${pokemonName['name']}`)
+            console.log(`${ pokemonName['name']}`)
             try {
                 let url = `https://pokeapi.co/api/v2/pokemon/${pokemonName['name']}`;
                 let response = await fetch(url);
-                pokeAll[i] = await response.json();
-                pokeSearch[i] = true
+                let currentPokemon = await response.json();
+                let id = currentPokemon['id']
+                pokeAll[id] = currentPokemon;
+                pokeSearch[id] = true;
             } catch (e) {
                 alert('an error has occurred');
                 location.reload();

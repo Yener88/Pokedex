@@ -74,6 +74,7 @@ main {
     transition-duration: 0.3s;
     display: flex;
     justify-content: center;
+    object-fit: contain;
 }
 
 .first-smallcard-container img:hover {
