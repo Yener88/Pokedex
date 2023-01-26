@@ -2,56 +2,45 @@ function baby() {
     return currentEvolution['chain']['is_baby'] == true;
 }
 
-
 function noEvolution() {
     return currentEvolution['chain']['evolves_to'][0] == undefined;
 }
-
 
 function noSecondEvolution() {
     currentEvolution['chain']['evolves_to'][0]['evolves_to'][0] == undefined;
 }
 
-
 function firstEvolutionByLevelUp() {
     return currentEvolution['chain']['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'level-up';
 }
-
 
 function secondEvolutionByLevelUp() {
     return currentEvolution['chain']['evolves_to'][0]['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'level-up';
 }
 
-
 function firstEvolutionByItem() {
     return currentEvolution['chain']['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'use-item';
 }
-
 
 function secondEvolutionByItem() {
     return currentEvolution['chain']['evolves_to'][0]['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'use-item';
 }
 
-
 function firstEvolutionByTrade() {
     return currentEvolution['chain']['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'trade';
 }
-
 
 function secondEvolutionByTrade() {
     return currentEvolution['chain']['evolves_to'][0]['evolves_to'][0]['evolution_details'][0]['trigger']['name'] == 'trade';
 }
 
-
 function moreEvolutions() {
     return currentEvolution['chain']['evolves_to'].length > 1;
 }
 
-
 function moreEvolutionsTwo() {
     return currentEvolution['chain']['evolves_to'][0]['evolves_to'];
 }
-
 
 function firstEvolutionLenght() {
     return currentEvolution['chain']['evolves_to'].length;
@@ -102,7 +91,6 @@ async function showFirstEvolution() {
     await showSecondEvolution();
 }
 
-
 async function showSecondEvolution() {
     if (!noEvolution()) {
         for (let i = 0; i < firstEvolutionLenght(); i++) {
@@ -123,7 +111,6 @@ async function showSecondEvolution() {
         loadFullscreen = false;
     }
 }
-
 
 async function showThirdEvolution() {
     if (!noSecondEvolution()) {

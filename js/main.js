@@ -18,17 +18,22 @@ let soundSwipe = new Audio('audio/swipe.mp3');
 
 // API
 async function pokesAll() {
+    openLoader(); 
     let pokeAllNamesUrl = 'https://pokeapi.co/api/v2/pokemon?limit=898&offset=0';
     let pokeAllNamesresponse = await fetch(pokeAllNamesUrl);
     pokeAllNames = await pokeAllNamesresponse.json();
-    for (let i = pokeBegin; i < pokeMax; i++) {
-        let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        let response = await fetch(url);
-        pokeAll[i] = await response.json();
-        favouritesArray[i] = false;
-        pokeAllContent(i);
-    }
+    setTimeout(async () => {
+        for (let i = pokeBegin; i < pokeMax; i++) {
+            let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+            let response = await fetch(url);
+            pokeAll[i] = await response.json();
+            favouritesArray[i] = false;
+            pokeAllContent(i);
+        }
+        closeLoader();
+    }, 500); 
 }
+
 
 // Render first view
 function pokeAllText(i, firstType) {
@@ -99,14 +104,12 @@ function muteAudio() {
     soundTheme.volume = 0;
 }
 
-
 function playAudio() {
     soundTheme.muted = false;
     soundTheme.play();
     soundTheme.loop = true;
     soundTheme.volume = 0.01;
 }
-
 
 async function countPokemons() {
     document.getElementById('counter').innerHTML = pokeAll.length - 1;
@@ -122,16 +125,13 @@ function renderByScroll() {
     }
 }
 
-
 window.addEventListener('scroll', () => {
     renderByScroll();
 })
 
-
 function userDidScroll() {
     return (window.innerHeight + window.scrollY) > (window.innerHeight);
 }
-
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -142,11 +142,9 @@ function addClass(id, className) {
     document.getElementById(id).classList.add(className);
 }
 
-
 function removeClass(id, className) {
     document.getElementById(id).classList.remove(className);
 }
-
 
 function emptyInner(id) {
     document.getElementById(id).innerHTML = ``;
