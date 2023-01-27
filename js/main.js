@@ -15,10 +15,13 @@ let soundTheme = new Audio('audio/theme.mp3');
 let soundOpen = new Audio('audio/open.mp3');
 let soundClose = new Audio('audio/close.mp3');
 let soundSwipe = new Audio('audio/swipe.mp3');
+const smallCards = document.getElementsByClassName("smallCard");
+const firstSmallCards = document.getElementsByClassName("first-smallcard-container img");
+
 
 // API
 async function pokesAll() {
-    openLoader(); 
+    openLoader();
     let pokeAllNamesUrl = 'https://pokeapi.co/api/v2/pokemon?limit=898&offset=0';
     let pokeAllNamesresponse = await fetch(pokeAllNamesUrl);
     pokeAllNames = await pokeAllNamesresponse.json();
@@ -31,9 +34,27 @@ async function pokesAll() {
             pokeAllContent(i);
         }
         closeLoader();
-    }, 500); 
+    }, 500);
+    
 }
 
+window.onload = function(){
+    removeHover();
+    for (let i = 0; i < smallCards.length; i++) {
+        smallCards[i].classList.add("no-hover");
+    }
+    for (let i = 0; i < firstSmallCards.length; i++) {
+        firstSmallCards[i].classList.add("no-hover");
+    }
+    setTimeout(function(){ 
+        for (let i = 0; i < smallCards.length; i++) {
+            smallCards[i].classList.remove("no-hover");
+        }
+        for (let i = 0; i < firstSmallCards.length; i++) {
+            firstSmallCards[i].classList.remove("no-hover");
+        }
+    }, 1800);
+}
 
 // Render first view
 function pokeAllText(i, firstType) {
@@ -61,6 +82,20 @@ function pokeAllText(i, firstType) {
     `;
     loopForPokeAllTypes(i);
     countPokemons();
+    for (let i = 0; i < smallCards.length; i++) {
+        smallCards[i].classList.add("no-hover");
+    }
+    for (let i = 0; i < firstSmallCards.length; i++) {
+        firstSmallCards[i].classList.add("no-hover");
+    }
+    setTimeout(function(){ 
+        for (let i = 0; i < smallCards.length; i++) {
+            smallCards[i].classList.remove("no-hover");
+        }
+        for (let i = 0; i < firstSmallCards.length; i++) {
+            firstSmallCards[i].classList.remove("no-hover");
+        }
+    }, 1800);
 }
 
 // Types
@@ -80,19 +115,18 @@ function loopForPokeAllTypes(i) {
     }
 }
 
-// Load more pokemon
-async function showMorePokemon() {
+function showMorePokemon() {
     pokeBegin = pokeDisplay + 1;
     pokeDisplay = pokeDisplay + 12;
     pokeMax = pokeDisplay + 1;
-    await pokesAll();
+    pokesAll();
+
 }
 
 // Loadingbar
 function openLoader() {
     removeClass('loadcontainer', 'd-none');
 }
-
 
 function closeLoader() {
     addClass('loadcontainer', 'd-none');

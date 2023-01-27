@@ -560,6 +560,8 @@ body {
     background: rgb(173, 173, 173);
 }
 
+
+
 /* ######################### FEATURES ######################### */
 /* ######################### HEADER ######################### */
 header {
@@ -794,6 +796,7 @@ header {
     .impsize {
         width: 92%;
     }
+
     .startbtnstyleAhref {
         width: 81%;
     }
@@ -973,9 +976,11 @@ header {
     .closelogin {
         right: 20px !important;
     }
+
     .impsize {
         width: 88%;
     }
+
     .startbtnstyleAhref {
         width: 200px !important;
     }
