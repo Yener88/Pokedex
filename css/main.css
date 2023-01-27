@@ -10,6 +10,10 @@ body {
     background-attachment: fixed;
     background-position: top;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ######################### CHARTS ######################### */
@@ -566,16 +570,16 @@ body {
 /* ######################### HEADER ######################### */
 header {
     z-index: 4;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 0px;
     background: url(../img/bg.jpg);
     background-size: contain;
     background-attachment: fixed;
     background-position: top;
     max-width: 1200px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    margin: 0 auto;
+    width: 98%;
+    padding-top: 5px;
+
 }
 
 .header {

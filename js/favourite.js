@@ -27,13 +27,14 @@ function FavClose() {
     emptyInner('maincontainer');
     favouritesShow = false;
     pokeSearchs = [];
-    pokeBegin = 1;
     pokesAll();
     setTimeout(function() {
         favOpenButtonClicked = false;
     }, 1000); // 1 Sekunde Wartezeit
+    location.reload();
 }
 }
+
 // load favorites
 async function loadFavourite() {
     openLoader();
