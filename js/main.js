@@ -18,7 +18,6 @@ let soundSwipe = new Audio('audio/swipe.mp3');
 const smallCards = document.getElementsByClassName("smallCard");
 const firstSmallCards = document.getElementsByClassName("first-smallcard-container img");
 
-
 // API
 async function pokesAll() {
     openLoader();
@@ -35,7 +34,6 @@ async function pokesAll() {
         }
         closeLoader();
     }, 500);
-    
 }
 
 window.onload = function(){

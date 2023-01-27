@@ -17,22 +17,22 @@ let favOpenButtonClicked = false;
 function FavClose() {
     if (!favOpenButtonClicked) {
         favOpenButtonClicked = true;
-    document.getElementById("FavClose").disabled = true;
-    timeoutId = setTimeout(() => {
-        document.getElementById("FavClose").disabled = false;
-    }, 1000);
-    removeClass('footerId', 'd-none');
-    removeClass('FavOpen', 'd-none');
-    addClass('FavClose', 'd-none');
-    emptyInner('maincontainer');
-    favouritesShow = false;
-    pokeSearchs = [];
-    pokesAll();
-    setTimeout(function() {
-        favOpenButtonClicked = false;
-    }, 1000); // 1 Sekunde Wartezeit
-    location.reload();
-}
+        document.getElementById("FavClose").disabled = true;
+        timeoutId = setTimeout(() => {
+            document.getElementById("FavClose").disabled = false;
+        }, 1000);
+        removeClass('footerId', 'd-none');
+        removeClass('FavOpen', 'd-none');
+        addClass('FavClose', 'd-none');
+        emptyInner('maincontainer');
+        favouritesShow = false;
+        pokeSearchs = [];
+        pokesAll();
+        setTimeout(function () {
+            favOpenButtonClicked = false;
+        }, 1000); // 1 Sekunde Wartezeit
+        location.reload();
+    }
 }
 
 // load favorites
